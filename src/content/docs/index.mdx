@@ -1,0 +1,37 @@
+---
+title: MSC 标准
+description: MSC（Midsan Code）公开标准文档站，收录 LGDF 等分层数据格式规范。
+template: splash # Remove or comment out this line to display the site sidebar on this page.
+hero:
+  tagline: MSC 公开标准文档 · 分层数据格式规范
+  actions:
+    - text: 阅读 LGDF 标准
+      link: /lgdf-standard/
+      icon: right-arrow
+    - text: GitHub 组织
+      link: https://github.com/midsancode
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## 收录标准
+
+<CardGrid stagger>
+	<Card title="LGDF 通用数据格式" icon="document">
+		Layered Generic Data Format v1.0.1 —— 把二进制资源与 JSON 描述分层存储的通用工程格式，
+		含资源层、元数据层、描述层、RSA/ECC 签名与导出/导入机制。
+		[阅读标准全文 →](/lgdf-standard/)
+	</Card>
+	<Card title="配套 SDK" icon="puzzle">
+		`lgdf-sdk`（Python）实现创建 / 读取 / 修改 / 校验 / 导出 / 导入，纯标准库，零必选依赖。
+	</Card>
+	<Card title="校验与签名" icon="approve-check">
+		9 步全量校验流程保证资源与元数据双向镜像一致；作者签名使用 RSA/ECC，
+		时间戳由公共 TSA（RFC 3161）签发。
+	</Card>
+	<Card title="版本演进" icon="list-format">
+		标准采用语义化版本号，当前 v1.0.1；变更记录见标准文档末章「版本历史」。
+	</Card>
+</CardGrid>
