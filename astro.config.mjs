@@ -7,6 +7,10 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'MSC 标准',
+			defaultLocale: 'zh-CN',
+			locales: {
+				root: { label: '简体中文', lang: 'zh-CN' },
+			},
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/midsancode' }],
 			sidebar: [
 				{
