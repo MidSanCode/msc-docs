@@ -1,6 +1,6 @@
-# MSC 标准（midsancode standards）
+# MSC钟码文档站（midsancode standards）
 
-MSC 公开标准文档站，基于 [Astro](https://astro.build) + [Starlight](https://starlight.astro.build) 构建。
+MSC钟码文档站 —— 收录 LGDF 等分层数据格式规范的公开标准文档站，基于 [Astro](https://astro.build) + [Starlight](https://starlight.astro.build) 构建。
 
 当前收录：
 

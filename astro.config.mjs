@@ -6,7 +6,7 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'MSC 标准',
+			title: 'MSC钟码文档站',
 			defaultLocale: 'zh-CN',
 			locales: {
 				root: { label: '简体中文', lang: 'zh-CN' },
