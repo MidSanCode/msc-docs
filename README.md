@@ -1,10 +1,10 @@
 # MSC钟码文档站（midsancode standards）
 
-MSC钟码文档站 —— 收录 LGDF 等分层数据格式规范的公开标准文档站，基于 [Astro](https://astro.build) + [Starlight](https://starlight.astro.build) 构建。
+MSC钟码文档站 —— MidsanCode 组织的公开技术标准与文档站点，基于 [Astro](https://astro.build) + [Starlight](https://starlight.astro.build) 构建，标准持续扩充中。
 
 当前收录：
 
-- **LGDF 通用数据格式 v1.0.1**（Layered Generic Data Format）— [标准全文](https://github.com/midsancode/msc-standards/blob/main/src/content/docs/lgdf-standard.md)
+- **LGDF 通用数据格式 v1.0.1**（Layered Generic Data Format）— [标准全文](https://github.com/midsancode/msc-docs/blob/main/src/content/docs/lgdf-standard.md)
 
 ## 本地开发
 
