@@ -5,6 +5,7 @@ MSC钟码文档站 —— MidsanCode 组织的公开技术标准与文档站点�
 当前收录：
 
 - **LGDF 通用数据格式 v1.0.1**（Layered Generic Data Format）— [标准全文](https://github.com/midsancode/msc-docs/blob/main/src/content/docs/lgdf-standard.md)
+- **OpenPrairie 服务端** — API 调用文档（12 个分组）与 Bot 开发指南，整理自 [OpenPrairie-server](https://github.com/MidSanCode/OpenPrairie-server) 的 `docs/`，接口路径与鉴权级别已对齐网关路由表
 
 ## 本地开发
 
@@ -21,12 +22,16 @@ npm run preview  # 预览构建产物
 
 ```
 .
-├── astro.config.mjs          # 站点与侧边栏配置
+├── astro.config.mjs               # 站点与侧边栏配置
 ├── src/
 │   ├── content.config.ts
-│   └── content/docs/         # .md/.mdx 即路由
-│       ├── index.mdx         # 首页
-│       └── lgdf-standard.md  # LGDF 标准全文
+│   └── content/docs/              # .md/.mdx 即路由
+│       ├── index.mdx              # 首页
+│       ├── lgdf-standard.md       # LGDF 标准全文
+│       └── openprairie/           # OpenPrairie 服务端文档
+│           ├── index.md           # 概览（架构、端口、权限模型）
+│           ├── api/               # API 调用（index + 11 个分组）
+│           └── bots/              # Bot 开发指南（4 篇）
 └── package.json
 ```
 

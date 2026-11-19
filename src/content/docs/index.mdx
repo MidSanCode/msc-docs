@@ -1,13 +1,16 @@
 ---
 title: MSC钟码文档站
-description: MSC钟码文档站 —— 收录 LGDF 等分层数据格式规范的公开标准文档站。
+description: MSC钟码文档站 —— MidsanCode 组织的公开技术标准与服务端接口文档站。
 template: splash # Remove or comment out this line to display the site sidebar on this page.
 hero:
-  tagline: MSC钟码文档站 · 分层数据格式规范
+  tagline: MSC钟码文档站 · 标准规范与接口文档
   actions:
-    - text: 阅读 LGDF 标准
-      link: /lgdf-standard/
+    - text: OpenPrairie 服务端
+      link: /openprairie/
       icon: right-arrow
+    - text: LGDF 标准全文
+      link: /lgdf-standard/
+      icon: document
     - text: GitHub 组织
       link: https://github.com/midsancode
       icon: external
@@ -16,22 +19,30 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## 收录标准
+## 站点内容
 
 <CardGrid stagger>
+	<Card title="OpenPrairie 服务端" icon="setting">
+		Go 微服务后端（网关 + 账户 / 存储 / 聊天 / 帖子 / 推送 / 插件）的完整接口手册：
+		认证、钱包、帖子、营地、聊天、通话、存储、审核。
+		[查看概览 →](/openprairie/)
+	</Card>
+	<Card title="API 调用" icon="open-book">
+		12 个接口分组，逐个列出方法、路径、鉴权级别、请求体与错误码。
+		[进入 API 文档 →](/openprairie/api/)
+	</Card>
+	<Card title="Bot 开发指南" icon="puzzle">
+		用 `ofb_` 静态 token 驱动自动化账号：创建与认证、能力清单、
+		WebSocket 实时事件、实战示例与明确的限制。
+		[开始开发 Bot →](/openprairie/bots/)
+	</Card>
 	<Card title="LGDF 通用数据格式" icon="document">
-		Layered Generic Data Format v1.0.1 —— 把二进制资源与 JSON 描述分层存储的通用工程格式，
+		分层通用数据格式 v1.0.1 —— 把二进制资源与 JSON 描述分层存储，
 		含资源层、元数据层、描述层、RSA/ECC 签名与导出/导入机制。
 		[阅读标准全文 →](/lgdf-standard/)
 	</Card>
-	<Card title="配套 SDK" icon="puzzle">
-		`lgdf-sdk`（Python）实现创建 / 读取 / 修改 / 校验 / 导出 / 导入，纯标准库，零必选依赖。
-	</Card>
-	<Card title="校验与签名" icon="approve-check">
-		9 步全量校验流程保证资源与元数据双向镜像一致；作者签名使用 RSA/ECC，
-		时间戳由公共 TSA（RFC 3161）签发。
-	</Card>
-	<Card title="版本演进" icon="list-format">
-		标准采用语义化版本号，当前 v1.0.1；变更记录见标准文档末章「版本历史」。
-	</Card>
 </CardGrid>
+
+## 关于本站在维护
+
+文档随仓库源码更新。接口路径与鉴权级别取自网关路由表；与上游文档不一致处以代码为准，并在相关页面注明差异。
