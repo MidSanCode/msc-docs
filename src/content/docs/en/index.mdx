@@ -1,0 +1,48 @@
+---
+title: MSC Documentation
+description: Public technical standards and server API documentation from the MidsanCode organization.
+template: splash # Remove or comment out this line to display the site sidebar on this page.
+hero:
+  tagline: MSC Documentation · Standards and API Reference
+  actions:
+    - text: OpenPrairie Server
+      link: /en/openprairie/
+      icon: right-arrow
+    - text: LGDF Standard
+      link: /en/lgdf-standard/
+      icon: document
+    - text: GitHub Organization
+      link: https://github.com/midsancode
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Documentation
+
+<CardGrid stagger>
+	<Card title="OpenPrairie Server" icon="setting">
+		Complete API guide for the Go microservices backend (gateway + account, storage, chat, posts, push, and plugin services):
+		authentication, wallet, posts, camps, chat, calls, storage, and moderation.
+		[View overview →](/en/openprairie/)
+	</Card>
+	<Card title="API Reference" icon="open-book">
+		Twelve API groups, each listing methods, paths, authentication levels, request bodies, and error codes.
+		[Open the API reference →](/en/openprairie/api/)
+	</Card>
+	<Card title="Bot Development Guide" icon="puzzle">
+		Automate accounts with `ofb_` static tokens: registration and authentication, capability reference,
+		real-time WebSocket events, practical examples, and clearly documented limitations.
+		[Start building a bot →](/en/openprairie/bots/)
+	</Card>
+	<Card title="LGDF Generic Data Format" icon="document">
+		Layered Generic Data Format v1.0.1 — a layered format for binary assets and JSON descriptions,
+		including asset, metadata, and description layers, RSA/ECC signatures, and export/import.
+		[Read the full specification →](/en/lgdf-standard/)
+	</Card>
+</CardGrid>
+
+## About This Site
+
+Documentation is updated alongside the repository source. API paths and authentication levels are taken from the gateway routing table; discrepancies with upstream documentation are resolved in favor of the code and noted on the relevant pages.
